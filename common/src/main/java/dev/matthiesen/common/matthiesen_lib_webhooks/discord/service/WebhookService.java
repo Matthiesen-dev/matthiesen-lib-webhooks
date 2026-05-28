@@ -18,20 +18,69 @@ import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+/**
+ * Service responsible for sending webhook messages to Discord.
+ * This class handles the HTTP communication with the Discord API, including serialization of messages to JSON, handling
+ * multipart form data for file uploads, and processing the responses from the Discord API. It provides a method to send
+ * a WebhookMessage to a specified Discord webhook URL, and throws appropriate exceptions if any errors occur during the
+ * process, such as serialization issues or delivery failures. The WebhookService is designed to be used by higher-level
+ * clients, such as the DiscordWebhookClientImpl, to abstract away the details of the HTTP communication and error handling
+ * when sending messages to Discord webhooks.
+ */
 public class WebhookService {
     private static final int CONNECT_TIMEOUT_MS = 5000;
     private static final int READ_TIMEOUT_MS = 5000;
 
     private final Gson gson;
 
+    /**
+     * Constructs a new WebhookService with a default Gson instance for JSON serialization. The Gson instance is configured
+     * to disable HTML escaping, which allows for better handling of special characters in webhook messages without escaping
+     * them unnecessarily. This default constructor provides a convenient way to create a WebhookService with standard JSON
+     * serialization settings, while still allowing for customization by providing an alternative constructor that accepts a
+     * custom Gson instance if needed.
+     */
     public WebhookService() {
         this(new GsonBuilder().disableHtmlEscaping().create());
     }
 
+    /**
+     * Constructs a new WebhookService with the specified Gson instance for JSON serialization. This constructor allows for
+     * customization of the JSON serialization behavior by accepting a custom Gson instance, which can be configured with
+     * specific settings or type adapters as needed. By providing this constructor, users of the WebhookService can have
+     * more control over how their webhook messages are serialized to JSON before being sent to the Discord API, allowing
+     * for greater flexibility in handling different message formats or special cases that may arise during serialization.
+     * @param gson The Gson instance to be used for JSON serialization of webhook messages. This instance should be properly
+     *             configured to handle the specific requirements of the webhook messages being sent, such as disabling HTML
+     *             escaping or registering custom type adapters for complex message structures. By allowing a custom Gson instance
+     *             to be provided, the WebhookService can accommodate a wide range of serialization needs and ensure that webhook
+     *             messages are correctly formatted for delivery to the Discord API.
+     */
     public WebhookService(Gson gson) {
         this.gson = gson;
     }
 
+    /**
+     * Sends a webhook message to the specified Discord webhook URL. This method handles the entire process of preparing the
+     * HTTP request, including serializing the WebhookMessage to JSON, handling multipart form data if files are included in
+     * the message, and processing the response from the Discord API. If any errors occur during this process, such as issues
+     * with serialization or delivery failures indicated by non-successful HTTP status codes, appropriate exceptions are thrown
+     * to provide detailed information about the error. This method serves as the core functionality of the WebhookService,
+     * allowing clients to send messages to Discord webhooks with robust error handling and support for complex message structures
+     * that may include file attachments.
+     * @param webhookUrl The URL of the Discord webhook to which the message should be sent. This URL must be a valid Discord
+     *                   webhook URL, and it is used to identify the specific webhook endpoint that will receive the message.
+     *                   The method will validate that the webhookUrl is not null or blank before attempting to send the message,
+     *                   and will throw a DiscordWebhookException if the URL is invalid.
+     * @param message The WebhookMessage object containing the content of the message to be sent to the Discord webhook.
+     *                This object may include text content, embeds, and file attachments, and it will be serialized to JSON
+     *                for delivery to the Discord API. The method will validate that the message is not null before attempting
+     *                to send it, and will throw a DiscordWebhookException if the message is null.
+     * @throws DiscordWebhookException If an error occurs during the process of sending the webhook message, such as an
+     * invalid webhook URL, a null message, serialization issues, or delivery failures indicated by non-successful HTTP
+     * status codes from the Discord API. This exception provides detailed information about the nature of the error, allowing
+     * clients to handle it appropriately in their application logic.
+     */
     public void send(String webhookUrl, WebhookMessage message) throws DiscordWebhookException {
         if (webhookUrl == null || webhookUrl.isBlank()) {
             throw new DiscordWebhookException("Webhook URL must not be blank");
