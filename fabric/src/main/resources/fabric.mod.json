@@ -23,7 +23,6 @@
     ]
   },
   "depends": {
-    "minecraft": "1.21.1",
-    "matthiesen_lib_api": ">=1.2.5 <2.0.0"
+    "minecraft": "1.21.1"
   }
 }
