@@ -1,20 +1,50 @@
-# template-cobblemon-sidemod
+# matthiesen-lib-webhooks
 
 <div>
   <img src="https://mods.matthiesen.dev/badges/matthiesenLibAPI.svg" alt="Matthiesen Lib API">
-  <img src="https://mods.matthiesen.dev/badges/cobblemon.svg" alt="Cobblemon">
 </div>
 
-Template for a Cobblemon side mod. This template includes the necessary setup for a mod that depends on the Matthiesen Lib API and Cobblemon, 
-but does not include any specific functionality. You can use this as a starting point for creating your own Cobblemon side mod.
+Cross-loader Discord webhook helper for server lifecycle notifications.
 
 ## Requirements
 - [Matthiesen Lib API](https://modrinth.com/mod/matthiesen-lib-api)
-- [Cobblemon](https://modrinth.com/mod/cobblemon)
 
 ## Docs
 
-Documentation for this mod can be found at [mods.matthiesen.dev](https://mods.matthiesen.dev/TODO/)
+Documentation for this mod can be found at [mods.matthiesen.dev](https://mods.matthiesen.dev/matthiesen-lib-webhooks/)
+
+## Discord Webhook Setup
+
+Set `MATTHIESEN_LIB_WEBHOOK_URL` in the server environment before startup.
+
+Example:
+
+```bash
+export MATTHIESEN_LIB_WEBHOOK_URL="https://discord.com/api/webhooks/..."
+```
+
+When configured, the mod posts `Server Startup` and `Server Shutdown` embeds.
+
+The webhook client implementation is fully Java-based and does not use Lombok.
+
+## Library Usage
+
+```java
+MatthiesenLibWebhooks.Webhooks webhooks = new MatthiesenLibWebhooks.Webhooks("https://discord.com/api/webhooks/...");
+
+webhooks.sendMessage(message -> message
+        .withUsername("My Mod")
+        .withContent("Simple webhook message"));
+
+webhooks.sendMessage(message -> message
+        .withUsername("My Mod")
+        .addEmbed(embed -> embed
+                .withTitle("Status Update")
+                .withDescription("Everything is online")
+                .addField("Players", "12", true)
+                .addField("TPS", "20.0", true)
+        ));
+```
 
 ## Version Compatibility
 

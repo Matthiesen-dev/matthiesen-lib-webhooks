@@ -11,8 +11,8 @@ on:
     types: [ published ]
 
 env:
-  MOD_NAME: Template Cobblemon Sidemod
-  ARTIFACT_BASENAME: template-cobblemon-sidemod
+  MOD_NAME: Matthiesen Lib Webhooks
+  ARTIFACT_BASENAME: matthiesen-lib-webhooks
   RELEASE_JARS_ARTIFACT_PREFIX: release-jars
   FABRIC_LOADER_VERSION: '0.17.2+'
   NEOFORGE_LOADER_VERSION: '21.1.182+'
