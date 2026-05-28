@@ -1,4 +1,4 @@
-# matthiesen-lib-webhooks
+# Matthiesen Lib Webhooks
 
 A Server-side library mod for Matthiesen Lib projects that want to be able to send discord webhooks easily!
 
