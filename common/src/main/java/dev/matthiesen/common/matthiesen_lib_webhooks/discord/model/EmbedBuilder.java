@@ -22,6 +22,11 @@ public class EmbedBuilder {
     private String timestamp;
 
     /**
+     * Creates an empty embed builder.
+     */
+    public EmbedBuilder() {}
+
+    /**
      * Sets the embed title.
      *
      * @param title the title text
