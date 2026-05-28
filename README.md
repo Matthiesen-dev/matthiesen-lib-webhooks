@@ -1,31 +1,10 @@
 # matthiesen-lib-webhooks
 
-<div>
-  <img src="https://mods.matthiesen.dev/badges/matthiesenLibAPI.svg" alt="Matthiesen Lib API">
-</div>
-
-Cross-loader Discord webhook helper for server lifecycle notifications.
-
-## Requirements
-- [Matthiesen Lib API](https://modrinth.com/mod/matthiesen-lib-api)
+A Server-side library mod for Matthiesen Lib projects that want to be able to send discord webhooks easily!
 
 ## Docs
 
 Documentation for this mod can be found at [mods.matthiesen.dev](https://mods.matthiesen.dev/matthiesen-lib-webhooks/)
-
-## Discord Webhook Setup
-
-Set `MATTHIESEN_LIB_WEBHOOK_URL` in the server environment before startup.
-
-Example:
-
-```bash
-export MATTHIESEN_LIB_WEBHOOK_URL="https://discord.com/api/webhooks/..."
-```
-
-When configured, the mod posts `Server Startup` and `Server Shutdown` embeds.
-
-The webhook client implementation is fully Java-based and does not use Lombok.
 
 ## Library Usage
 
