@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * Represents a Discord webhook message payload.
  */
+@SuppressWarnings("unused")
 public class WebhookMessage {
     private String content;
     private String username;

@@ -5,6 +5,7 @@ import java.util.List;
 /**
  * Fluent builder for creating {@link Component} instances.
  */
+@SuppressWarnings("unused")
 public class ComponentBuilder {
     private int type;
     private Integer style;

@@ -9,6 +9,7 @@ import java.util.List;
  *
  * <p>Use this for interactive structures such as action rows and buttons.</p>
  */
+@SuppressWarnings("unused")
 public class Component {
     /** Action row component type. */
     public static final int ACTION_ROW = 1;

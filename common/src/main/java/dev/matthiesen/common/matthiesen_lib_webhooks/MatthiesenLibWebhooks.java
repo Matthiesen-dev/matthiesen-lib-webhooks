@@ -13,6 +13,7 @@ import java.util.function.Consumer;
  * MatthiesenLibWebhooks is a utility mod for sending webhook messages, particularly to Discord. It provides methods to
  * create webhook notifiers and send messages using a builder pattern for easy message construction.
  */
+@SuppressWarnings("unused")
 public class MatthiesenLibWebhooks {
     /**
      * Private constructor to prevent instantiation of the MatthiesenLibWebhooks class, as it is intended to be a utility class with static methods.

@@ -13,7 +13,9 @@ public class DiscordWebhookClientImpl implements DiscordWebhookClient {
 
     /**
      * Constructs a new DiscordWebhookClientImpl with the specified WebhookService.
-     * @param webhookService The WebhookService instance that will be used to send messages to Discord webhooks. This service is responsible for handling the actual HTTP requests and responses when communicating with the Discord API, allowing the DiscordWebhookClientImpl to focus on the higher-level logic of sending messages without worrying about the underlying network communication details.
+     * @param webhookService The WebhookService instance that will be used to send messages to Discord webhooks. This service is responsible for
+     *                       handling the actual HTTP requests and responses when communicating with the Discord API, allowing the DiscordWebhookClientImpl
+     *                       to focus on the higher-level logic of sending messages without worrying about the underlying network communication details.
      */
     public DiscordWebhookClientImpl(WebhookService webhookService) {
         this.webhookService = webhookService;

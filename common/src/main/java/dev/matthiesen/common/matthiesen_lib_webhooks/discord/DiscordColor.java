@@ -36,8 +36,8 @@ public enum DiscordColor {
      */
     GOLD(15844367),
     /**
-     * The color grey is represented by the integer value 9807270, which corresponds to the hexadecimal RGB color code #808080.
-     * This value can be used when setting the color of an embed in a Discord message to ensure that the embed displays with a grey color.
+     * The color gray is represented by the integer value 9807270, which corresponds to the hexadecimal RGB color code #808080.
+     * This value can be used when setting the color of an embed in a Discord message to ensure that the embed displays with a gray color.
      */
     GREY(9807270),
     /**

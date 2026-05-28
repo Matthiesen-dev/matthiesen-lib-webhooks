@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 /**
  * Fluent builder for creating {@link WebhookMessage} instances.
  */
+@SuppressWarnings("unused")
 public class WebhookMessageBuilder {
     private String content;
     private String username;

@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Fluent builder for creating {@link Embed} instances.
  */
+@SuppressWarnings("unused")
 public class EmbedBuilder {
     private String title;
     private String description;

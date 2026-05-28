@@ -17,7 +17,8 @@ public class DiscordWebhookException extends Exception {
     /**
      * Constructs a new DiscordWebhookException with the specified detail message and cause.
      * @param message A detailed message describing the error that occurred while sending a message to the Discord webhook.
-     * @param cause The underlying cause of the exception, which can be used for debugging and error handling purposes. This allows you to trace back to the original exception that led to this error, such as a network failure or an invalid URL format.
+     * @param cause The underlying cause of the exception, which can be used for debugging and error handling purposes. This
+     *              allows you to trace back to the original exception that led to this error, such as a network failure or an invalid URL format.
      */
     public DiscordWebhookException(String message, Throwable cause) {
         super(message, cause);
