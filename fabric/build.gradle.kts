@@ -19,9 +19,6 @@ dependencies {
     libs.bundles.fabricModImplementation.get().forEach { dependency ->
         modImplementation(dependency.copy())
     }
-    libs.bundles.fabricModImplementationNoTransitive.get().forEach { dependency ->
-        modImplementation(dependency.copy()) { isTransitive = false }
-    }
 
     implementation(project(":common", configuration = "namedElements"))
     "developmentFabric"(project(":common", configuration = "namedElements"))
