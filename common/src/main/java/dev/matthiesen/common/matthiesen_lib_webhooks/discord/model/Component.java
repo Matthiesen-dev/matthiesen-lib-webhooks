@@ -38,6 +38,11 @@ public class Component {
     private List<Component> components;
 
     /**
+     * Creates an empty component.
+     */
+    public Component() {}
+
+    /**
      * Gets the component type.
      *
      * @return the Discord component type value
@@ -188,6 +193,11 @@ public class Component {
         private String id;
         private String name;
         private boolean animated;
+
+        /**
+         * Creates an empty emoji.
+         */
+        public Emoji() {}
 
         /**
          * Gets the emoji id.

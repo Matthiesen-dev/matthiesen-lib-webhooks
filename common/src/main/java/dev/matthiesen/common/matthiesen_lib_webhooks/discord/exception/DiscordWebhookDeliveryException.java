@@ -6,6 +6,13 @@ package dev.matthiesen.common.matthiesen_lib_webhooks.discord.exception;
  */
 @SuppressWarnings("unused")
 public class DiscordWebhookDeliveryException extends DiscordWebhookException {
+    /**
+     * The HTTP status code returned by the Discord API that caused the webhook delivery to fail. This status code can be used to
+     * determine the specific reason for the error, such as 400 for bad request, 401 for unauthorized, 403 for forbidden, 404 for
+     * not found, 500 for internal server error, etc. This information is crucial for debugging and handling errors when interacting
+     * with the Discord API, as it provides insight into why the delivery failed and what steps may be needed to resolve the issue
+     * (e.g., correcting the webhook URL, ensuring proper authentication, fixing message formatting, etc.).
+     */
     private final int statusCode;
 
     /**

@@ -18,6 +18,11 @@ public class WebhookMessageBuilder {
     private List<WebhookFile> files;
 
     /**
+     * Creates an empty webhook message builder.
+     */
+    public WebhookMessageBuilder() {}
+
+    /**
      * Sets plain message content.
      *
      * @param content the content text

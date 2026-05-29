@@ -19,6 +19,11 @@ public class Embed {
     private String timestamp;
 
     /**
+     * Creates an empty embed object.
+     */
+    public Embed() {}
+
+    /**
      * Gets the embed title.
      *
      * @return the title
@@ -207,6 +212,11 @@ public class Embed {
         private String icon_url;
 
         /**
+         * Creates an empty author section.
+         */
+        public Author() {}
+
+        /**
          * Gets the author name.
          *
          * @return the author name
@@ -269,6 +279,11 @@ public class Embed {
         private String icon_url;
 
         /**
+         * Creates an empty footer section.
+         */
+        public Footer() {}
+
+        /**
          * Gets the footer text.
          *
          * @return the footer text
@@ -312,6 +327,11 @@ public class Embed {
         private String name;
         private String value;
         private boolean inline;
+
+        /**
+         * Creates an empty embed field.
+         */
+        public EmbedField() {}
 
         /**
          * Gets the field name.
@@ -375,6 +395,11 @@ public class Embed {
         private String url;
 
         /**
+         * Creates an empty image section.
+         */
+        public Image() {}
+
+        /**
          * Gets the image URL.
          *
          * @return the image URL
@@ -398,6 +423,11 @@ public class Embed {
      */
     public static class Thumbnail {
         private String url;
+
+        /**
+         * Creates an empty thumbnail section.
+         */
+        public Thumbnail() {}
 
         /**
          * Gets the thumbnail URL.

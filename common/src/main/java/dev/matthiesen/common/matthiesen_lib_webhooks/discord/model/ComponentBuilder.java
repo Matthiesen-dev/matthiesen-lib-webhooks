@@ -17,6 +17,11 @@ public class ComponentBuilder {
     private List<Component> components;
 
     /**
+     * Creates an empty component builder.
+     */
+    public ComponentBuilder() {}
+
+    /**
      * Sets the component type.
      *
      * @param type the Discord component type
