@@ -11,7 +11,7 @@ junit = "5.1.0"
 publish = "0.35.0"
 sponge-mixin = "0.8.5"
 gson = "2.13.1"
-matthiesen_lib_api = "PR-26-SNAPSHOT"
+matthiesen_lib_api = "1.6.0"
 
 [plugins]
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
