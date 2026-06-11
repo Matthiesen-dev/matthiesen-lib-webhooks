@@ -1,6 +1,13 @@
 # Matthiesen Lib Webhooks
 
+<div>
+  <img src="https://mods.matthiesen.dev/badges/matthiesenLibAPI.svg" alt="Matthiesen Lib API">
+</div>
+
 A Server-side library mod for Matthiesen Lib projects that want to be able to send discord webhooks easily!
+
+## Requirements
+- [Matthiesen Lib API](https://modrinth.com/mod/matthiesen-lib-api/)
 
 ## Docs
 

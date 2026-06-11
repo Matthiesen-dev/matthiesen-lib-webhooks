@@ -17,8 +17,14 @@ env:
   FABRIC_LOADER_VERSION: '0.17.2+'
   NEOFORGE_LOADER_VERSION: '21.1.182+'
   MODRINTH_GAME_VERSION: 1.21.1
-  MODRINTH_DEPENDENCIES: '[]'
+  MODRINTH_DEPENDENCIES: |- 
+    [
+      {"project_id":"j2JrSWnx","dependency_type":"required"}
+    ]
   DISCORD_ICON_URL: "https://raw.githubusercontent.com/Matthiesen-dev/.github/refs/heads/main/logo-transparent.png"
+
+# The dependencies above correspond to:
+# - Matthiesen Lib API (j2JrSWnx)
 
 jobs:
   prepare:
