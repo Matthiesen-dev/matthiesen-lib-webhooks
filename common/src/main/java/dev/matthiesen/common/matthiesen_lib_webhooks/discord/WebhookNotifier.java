@@ -1,9 +1,9 @@
 package dev.matthiesen.common.matthiesen_lib_webhooks.discord;
 
 import dev.matthiesen.common.matthiesen_lib_webhooks.MatthiesenLibWebhooksConstants;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.api.DiscordWebhookClient;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.exception.DiscordWebhookException;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.model.WebhookMessage;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.api.DiscordWebhookClient;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.exception.DiscordWebhookException;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.model.WebhookMessage;
 
 /**
  * A class responsible for sending messages to Discord webhooks using a provided DiscordWebhookClient. It checks if the

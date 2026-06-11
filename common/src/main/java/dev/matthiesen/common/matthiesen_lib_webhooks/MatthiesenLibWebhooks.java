@@ -2,8 +2,8 @@ package dev.matthiesen.common.matthiesen_lib_webhooks;
 
 import dev.matthiesen.common.matthiesen_lib_webhooks.discord.WebhookNotifier;
 import dev.matthiesen.common.matthiesen_lib_webhooks.discord.internal.DiscordWebhookClientImpl;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.model.WebhookMessage;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.model.WebhookMessageBuilder;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.model.WebhookMessage;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.model.WebhookMessageBuilder;
 import dev.matthiesen.common.matthiesen_lib_webhooks.discord.service.WebhookService;
 
 import java.util.Objects;

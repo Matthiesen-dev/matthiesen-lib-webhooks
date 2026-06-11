@@ -12,13 +12,9 @@ architectury {
 dependencies {
     minecraft(libs.minecraft)
     mappings(loom.officialMojangMappings())
-
-    libs.bundles.commonCompileOnly.get().forEach { dependency ->
-        compileOnly(dependency.copy())
-    }
-    libs.bundles.commonImplementation.get().forEach { dependency ->
-        implementation(dependency)
-    }
+    compileOnly(libs.bundles.commonCompileOnly)
+    implementation(libs.bundles.commonImplementation)
+    modImplementation(libs.bundles.commonModImplementationNoTransitive) { isTransitive = false }
 
     testImplementation(libs.junit.api)
     testRuntimeOnly(libs.junit.engine)

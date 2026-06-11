@@ -1,8 +1,8 @@
 package dev.matthiesen.common.matthiesen_lib_webhooks.discord.internal;
 
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.api.DiscordWebhookClient;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.exception.DiscordWebhookException;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.model.WebhookMessage;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.api.DiscordWebhookClient;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.exception.DiscordWebhookException;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.model.WebhookMessage;
 import dev.matthiesen.common.matthiesen_lib_webhooks.discord.service.WebhookService;
 
 /**
