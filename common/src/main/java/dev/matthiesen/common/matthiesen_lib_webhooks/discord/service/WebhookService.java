@@ -2,11 +2,11 @@ package dev.matthiesen.common.matthiesen_lib_webhooks.discord.service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.exception.DiscordWebhookDeliveryException;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.exception.DiscordWebhookException;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.exception.DiscordWebhookSerializationException;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.model.WebhookFile;
-import dev.matthiesen.common.matthiesen_lib_webhooks.discord.model.WebhookMessage;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.exception.DiscordWebhookDeliveryException;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.exception.DiscordWebhookException;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.exception.DiscordWebhookSerializationException;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.model.WebhookFile;
+import dev.matthiesen.common.matthiesen_lib_api.core.discord.model.WebhookMessage;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

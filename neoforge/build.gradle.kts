@@ -27,11 +27,10 @@ dependencies {
     minecraft(libs.minecraft.net)
     mappings(loom.officialMojangMappings())
     neoForge(libs.neoforge)
+    modImplementation(libs.bundles.neoforgeModImplementationNoTransitive) { isTransitive = false }
 
     implementation(project(":common", configuration = "namedElements"))
-    "developmentNeoForge"(project(":common", configuration = "namedElements")) {
-        isTransitive = false
-    }
+    "developmentNeoForge"(project(":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(":common", configuration = "transformProductionNeoForge"))
 
     testImplementation(libs.junit.api)

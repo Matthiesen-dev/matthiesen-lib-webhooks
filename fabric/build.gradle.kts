@@ -16,9 +16,8 @@ val shadowCommon: Configuration by configurations.creating
 dependencies {
     minecraft(libs.minecraft)
     mappings(loom.officialMojangMappings())
-    libs.bundles.fabricModImplementation.get().forEach { dependency ->
-        modImplementation(dependency.copy())
-    }
+    modImplementation(libs.bundles.fabricModImplementation)
+    modImplementation(libs.bundles.fabricModImplementationNoTransitive) { isTransitive = false }
 
     implementation(project(":common", configuration = "namedElements"))
     "developmentFabric"(project(":common", configuration = "namedElements"))
