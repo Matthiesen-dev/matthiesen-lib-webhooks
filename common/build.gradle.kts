@@ -2,7 +2,6 @@ plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
     id("matthiesen.minecraft-module-conventions")
-    id("matthiesen.publishing-conventions")
 }
 
 architectury {

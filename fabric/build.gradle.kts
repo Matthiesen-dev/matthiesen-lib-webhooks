@@ -3,7 +3,6 @@ plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
     id("matthiesen.shadow-platform-conventions")
-    id("matthiesen.publishing-conventions")
 }
 
 architectury {
