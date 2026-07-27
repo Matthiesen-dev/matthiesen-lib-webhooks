@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.matthiesen.fabric.matthiesen_lib_webhooks.MatthiesenLibWebhooksFabric"
+      "dev.matthiesen.matthiesen_core_webhooks.fabric.MatthiesenLibWebhooksFabric"
     ]
   },
   "depends": {
     "minecraft": "1.21.1",
-    "matthiesen_lib_api": ">=1.6.0 <2.0.0"
+    "matthiesen_core": ">=1.0.0-beta.11 <2.0.0"
   }
 }

@@ -1,4 +1,4 @@
-package dev.matthiesen.common.matthiesen_lib_webhooks;
+package dev.matthiesen.matthiesen_core_webhooks.common;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * This class contains constants and utility methods for the Matthiesen Lib Webhooks mod.
  */
-public class MatthiesenLibWebhooksConstants {
+public final class MatthiesenLibWebhooksConstants {
     /**
      * The unique identifier for the mod, used for registration and logging purposes.
      */
@@ -32,17 +32,5 @@ public class MatthiesenLibWebhooksConstants {
      */
     public static void createInfoLog(String message) {
         LOGGER.info(message);
-    }
-
-    /**
-     * Utility method to create an error log message using the mod's logger. This method can be used throughout the mod's codebase to log error messages,
-     * exceptions, or any other issues that arise during the mod's execution. Logging errors is crucial for debugging and troubleshooting, as it provides
-     * insights into what went wrong and helps developers identify and fix issues in the code.
-     * @param message The error message to be logged. This should provide detailed information about the error that occurred, including any relevant context,
-     *                such as the operation being performed when the error occurred, the values of important variables, or any other information that can assist
-     *                developers in understanding the nature of the error and how to address it effectively.
-     */
-    public static void createErrorLog(String message) {
-        LOGGER.error(message);
     }
 }

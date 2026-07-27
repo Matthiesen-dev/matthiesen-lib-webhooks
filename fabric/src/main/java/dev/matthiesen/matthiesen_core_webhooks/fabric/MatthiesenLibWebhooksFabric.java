@@ -1,13 +1,13 @@
-package dev.matthiesen.fabric.matthiesen_lib_webhooks;
+package dev.matthiesen.matthiesen_core_webhooks.fabric;
 
-import dev.matthiesen.common.matthiesen_lib_webhooks.MatthiesenLibWebhooks;
-import dev.matthiesen.common.matthiesen_lib_webhooks.MatthiesenLibWebhooksConstants;
+import dev.matthiesen.matthiesen_core_webhooks.common.MatthiesenLibWebhooks;
+import dev.matthiesen.matthiesen_core_webhooks.common.MatthiesenLibWebhooksConstants;
 import net.fabricmc.api.ModInitializer;
 
 /**
  * This is the main class for the Fabric implementation of the mod. It initializes the mod and sets up any necessary event listeners.
  */
-public class MatthiesenLibWebhooksFabric implements ModInitializer {
+public final class MatthiesenLibWebhooksFabric implements ModInitializer {
     /**
      * Constructor for the mod. This is where you can set up any necessary fields or perform any initial setup before the mod is fully initialized.
      */

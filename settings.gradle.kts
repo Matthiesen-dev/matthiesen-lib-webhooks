@@ -1,4 +1,4 @@
-rootProject.name = "matthiesen-lib-webhooks"
+rootProject.name = "matthiesen-core-webhooks"
 
 pluginManagement {
     repositories {

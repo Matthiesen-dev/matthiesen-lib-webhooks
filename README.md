@@ -1,36 +1,13 @@
-# Matthiesen Lib Webhooks
+# Matthiesen Core Webhooks
 
 <div>
-  <img src="https://mods.matthiesen.dev/badges/matthiesenLibAPI.svg" alt="Matthiesen Lib API">
+  <img src="https://mods.matthiesen.dev/badges/matthiesenCore.svg" alt="Matthiesen Core">
 </div>
 
-A Server-side library mod for Matthiesen Lib projects that want to be able to send discord webhooks easily!
+This is a server-side library mod for Matthiesen Core that provides Discord webhook functionality. It allows other mods to send messages to Discord channels via webhooks.
 
 ## Requirements
-- [Matthiesen Lib API](https://modrinth.com/mod/matthiesen-lib-api/)
-
-## Docs
-
-Documentation for this mod can be found at [mods.matthiesen.dev](https://mods.matthiesen.dev/matthiesen-lib-webhooks/)
-
-## Library Usage
-
-```java
-MatthiesenLibWebhooks.Webhooks webhooks = new MatthiesenLibWebhooks.Webhooks("https://discord.com/api/webhooks/...");
-
-webhooks.sendMessage(message -> message
-        .withUsername("My Mod")
-        .withContent("Simple webhook message"));
-
-webhooks.sendMessage(message -> message
-        .withUsername("My Mod")
-        .addEmbed(embed -> embed
-                .withTitle("Status Update")
-                .withDescription("Everything is online")
-                .addField("Players", "12", true)
-                .addField("TPS", "20.0", true)
-        ));
-```
+- [Matthiesen Core](https://modrinth.com/mod/matthiesen-core/)
 
 ## Version Compatibility
 
