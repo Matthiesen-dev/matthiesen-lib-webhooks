@@ -2,12 +2,12 @@ package dev.matthiesen.matthiesen_core_webhooks.common.service;
 
 import dev.matthiesen.matthiesen_core.common.api.discord.WebhookNotifierInstance;
 import dev.matthiesen.matthiesen_core.common.api.discord.WebhookNotifierService;
-import dev.matthiesen.matthiesen_core_webhooks.common.MatthiesenLibWebhooksConstants;
+import dev.matthiesen.matthiesen_core_webhooks.common.MatthiesenCoreWebhooks;
 
 public final class DiscordNotifierService implements WebhookNotifierService {
     @Override
     public void initialize() {
-        MatthiesenLibWebhooksConstants.createInfoLog("DiscordNotifierService initialized. Webhook notifications will attempt to be sent to Discord.");
+        MatthiesenCoreWebhooks.createInfoLog("DiscordNotifierService initialized. Webhook notifications will attempt to be sent to Discord.");
     }
 
     @Override

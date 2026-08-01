@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.matthiesen.matthiesen_core_webhooks.fabric.MatthiesenLibWebhooksFabric"
+      "dev.matthiesen.matthiesen_core_webhooks.fabric.MatthiesenCoreWebhooksFabric"
     ]
   },
   "depends": {
