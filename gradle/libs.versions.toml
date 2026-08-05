@@ -11,7 +11,8 @@ junit = "5.1.0"
 publish = "0.35.0"
 sponge-mixin = "0.8.5"
 gson = "2.13.1"
-matthiesen_core = "1.0.0-beta.11"
+matthiesen_core = "1.0.0-beta.34"
+forge-config-api-port = "21.1.6"
 
 [plugins]
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
@@ -36,11 +37,14 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 matthiesen-core-common = { group = "dev.matthiesen", name = "matthiesen-core-common", version.ref = "matthiesen_core" }
 matthiesen-core-fabric = { group = "dev.matthiesen", name = "matthiesen-core-fabric", version.ref = "matthiesen_core" }
 matthiesen-core-neoforge = { group = "dev.matthiesen", name = "matthiesen-core-neoforge", version.ref = "matthiesen_core" }
+forge-config-api-port-common = { group = "fuzs.forgeconfigapiport", name = "forgeconfigapiport-common-neoforgeapi", version.ref = "forge-config-api-port" }
+forge-config-api-port-fabric = { group = "fuzs.forgeconfigapiport", name = "forgeconfigapiport-fabric", version.ref = "forge-config-api-port" }
 
 [bundles]
-commonCompileOnly = ["sponge-mixin"]
+commonCompileOnly = ["sponge-mixin", "forge-config-api-port-common"]
 commonImplementation = ["gson"]
 commonModImplementationNoTransitive = ["matthiesen-core-common"]
 fabricModImplementation = ["fabric-loader", "fabric-api"]
+fabricModRuntimeOnly = ["forge-config-api-port-fabric"]
 fabricModImplementationNoTransitive = ["matthiesen-core-fabric"]
 neoforgeModImplementationNoTransitive = ["matthiesen-core-neoforge"]
