@@ -24,8 +24,6 @@ configure<PublishingExtension> {
 }
 
 configure<MavenPublishBaseExtension> {
-//    Signing is not needed for maven.matthiesen.dev
-//    signAllPublications()
     coordinates(
         project.group.toString(),
         "${rootProject.property("archives_base_name")}-${project.name}",

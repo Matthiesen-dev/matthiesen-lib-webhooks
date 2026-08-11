@@ -3,7 +3,6 @@ plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
     id("matthiesen.shadow-platform-conventions")
-    id("matthiesen.publishing-conventions")
 }
 
 architectury {
@@ -18,6 +17,7 @@ dependencies {
     mappings(loom.officialMojangMappings())
     modImplementation(libs.bundles.fabricModImplementation)
     modImplementation(libs.bundles.fabricModImplementationNoTransitive) { isTransitive = false }
+    modRuntimeOnly(libs.bundles.fabricModRuntimeOnly)
 
     implementation(project(":common", configuration = "namedElements"))
     "developmentFabric"(project(":common", configuration = "namedElements"))
